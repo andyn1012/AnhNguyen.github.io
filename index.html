@@ -18,7 +18,6 @@
             --secondary: #ff8c42;
             --light: #ffffff;
             --text: #333333;
-            --gold: #ff6b35;
         }
 
         body {
@@ -30,7 +29,6 @@
             overflow-x: hidden;
         }
 
-        /* Animated background particles */
         .bg-particles {
             position: fixed;
             top: 0;
@@ -69,7 +67,6 @@
             z-index: 1;
         }
 
-        /* Hero Section */
         header {
             padding: 6rem 0 4rem;
             animation: fadeInDown 1s ease;
@@ -145,7 +142,6 @@
 
         .hero-stats {
             background: white;
-            backdrop-filter: blur(10px);
             padding: 2rem;
             border-radius: 20px;
             border: 3px solid var(--accent);
@@ -177,7 +173,6 @@
             letter-spacing: 1px;
         }
 
-        /* Main Content */
         main {
             background: #fafafa;
             border-radius: 40px 40px 0 0;
@@ -216,7 +211,6 @@
             border-radius: 2px;
         }
 
-        /* Experience Cards */
         .experience-grid {
             display: grid;
             gap: 2rem;
@@ -306,7 +300,12 @@
             font-weight: bold;
         }
 
-        /* Skills Section */
+        .education-location {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -353,7 +352,6 @@
             box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
         }
 
-        /* Education Section */
         .education-grid {
             display: grid;
             gap: 2rem;
@@ -386,12 +384,6 @@
             margin-bottom: 0.5rem;
         }
 
-        .education-location {
-            color: var(--text);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
         .education-details {
             display: flex;
             gap: 2rem;
@@ -409,7 +401,6 @@
             font-weight: 600;
         }
 
-        /* Footer */
         footer {
             background: var(--primary);
             color: var(--light);
@@ -439,7 +430,6 @@
             color: var(--accent);
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .hero-content {
                 grid-template-columns: 1fr;
@@ -476,7 +466,6 @@
             }
         }
 
-        /* Scroll animations */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -512,7 +501,7 @@
                             📞 (682) 392-1073
                         </a>
                         <a href="mailto:ntandy1012@gmail.com" class="contact-item">
-                            ✉️ ntandy1012@gmail.com
+                            ✉️ Email
                         </a>
                         <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" class="contact-item">
                             💼 LinkedIn
@@ -539,7 +528,6 @@
 
     <main>
         <div class="container">
-            <!-- Experience Section -->
             <section class="animate-on-scroll">
                 <h2>Professional Experience</h2>
                 <div class="experience-grid">
@@ -607,7 +595,6 @@
                 </div>
             </section>
 
-            <!-- Project Section -->
             <section class="animate-on-scroll">
                 <h2>Featured Project</h2>
                 <div class="experience-card">
@@ -627,17 +614,17 @@
                 </div>
             </section>
 
-            <!-- Skills Section -->
             <section class="animate-on-scroll">
                 <h2>Skills & Expertise</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
                         <h3>Technical Skills</h3>
                         <div class="skill-list">
-                            <span class="skill-tag">Microsoft Office Suite</span>
-                            <span class="skill-tag">Word</span>
-                            <span class="skill-tag">PowerPoint</span>
+                            <span class="skill-tag">Microsoft Office</span>
                             <span class="skill-tag">Excel</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">Power BI</span>
                             <span class="skill-tag">Canva</span>
                             <span class="skill-tag">Adobe Photoshop</span>
                             <span class="skill-tag">Adobe Premiere</span>
@@ -649,9 +636,10 @@
                             <span class="skill-tag">Brand Management</span>
                             <span class="skill-tag">Marketing Strategy</span>
                             <span class="skill-tag">Customer Engagement</span>
-                            <span class="skill-tag">Application Management</span>
-                            <span class="skill-tag">Digital Marketing</span>
                             <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Market Analysis</span>
+                            <span class="skill-tag">Business Analysis</span>
+                            <span class="skill-tag">Digital Marketing</span>
                         </div>
                     </div>
                     <div class="skill-category">
@@ -664,7 +652,6 @@
                 </div>
             </section>
 
-            <!-- Education Section -->
             <section class="animate-on-scroll">
                 <h2>Education</h2>
                 <div class="education-grid">
@@ -698,7 +685,6 @@
                 </div>
             </section>
 
-            <!-- Additional Information -->
             <section class="animate-on-scroll">
                 <h2>Additional Information</h2>
                 <div class="experience-card">
@@ -725,7 +711,6 @@
     </footer>
 
     <script>
-        // Scroll animation observer
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -743,7 +728,6 @@
             observer.observe(el);
         });
 
-        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
