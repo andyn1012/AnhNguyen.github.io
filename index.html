@@ -1,1028 +1,464 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" data-palette="terracotta">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anh Nguyen | Marketing & Brand Management Professional</title>
-    
-    <!-- Google Fonts: Playfair Display (Editorial Serif), Plus Jakarta Sans & Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Custom Theme Variables Configuration -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Plus Jakarta Sans', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        bg: 'var(--bg-main)',
-                        surface: 'var(--bg-surface)',
-                        surfaceAlt: 'var(--bg-surface-alt)',
-                        ink: 'var(--text-main)',
-                        muted: 'var(--text-muted)',
-                        accent: 'var(--accent-primary)',
-                        accentHover: 'var(--accent-hover)',
-                        accentSoft: 'var(--accent-soft)',
-                        accentText: 'var(--accent-text)',
-                        borderTone: 'var(--border-color)',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Curated Palette Theme System & Scroll Reveal Animations -->
+    <title>Anh Nguyen - Marketing & Brand Management Professional</title>
     <style>
-        /* =====================================================================
-           PALETTE 1: EDITORIAL SLATE & TERRACOTTA (Warm Alabaster & Deep Slate)
-           ===================================================================== */
-        :root, [data-palette="terracotta"] {
-            --bg-main: #FAF8F5;
-            --bg-surface: #FFFFFF;
-            --bg-surface-alt: #F3EFEA;
-            --text-main: #1E293B;
-            --text-muted: #526071;
-            --accent-primary: #C2593F;
-            --accent-hover: #A8472F;
-            --accent-soft: #FCEEEB;
-            --accent-text: #9A3B24;
-            --border-color: #E5DFD7;
-        }
-        html.dark[data-palette="terracotta"] {
-            --bg-main: #121417;
-            --bg-surface: #1A1D22;
-            --bg-surface-alt: #22262D;
-            --text-main: #F4F1EA;
-            --text-muted: #9FA8B2;
-            --accent-primary: #E07A5F;
-            --accent-hover: #EB8E75;
-            --accent-soft: rgba(224, 122, 95, 0.14);
-            --accent-text: #F29B84;
-            --border-color: #2B3038;
+        :root {
+            --bg-color: #F8FAFC;
+            --surface-color: #FFFFFF;
+            --text-main: #0F172A;
+            --text-muted: #64748B;
+            --primary-blue: #2563EB;
+            --primary-blue-hover: #1D4ED8;
+            --accent-bg: #EFF6FF;
+            --border-color: #E2E8F0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
 
-        /* =====================================================================
-           PALETTE 2: MIDNIGHT NAVY & CHAMPAGNE GOLD (Executive Authority)
-           ===================================================================== */
-        [data-palette="navy"] {
-            --bg-main: #F6F8FB;
-            --bg-surface: #FFFFFF;
-            --bg-surface-alt: #EBF0F7;
-            --text-main: #0F1E36;
-            --text-muted: #4A5B75;
-            --accent-primary: #1B365D;
-            --accent-hover: #122644;
-            --accent-soft: #FDF6E7;
-            --accent-text: #9A6B16;
-            --border-color: #D8E1EE;
-        }
-        html.dark[data-palette="navy"] {
-            --bg-main: #0A111E;
-            --bg-surface: #111C2E;
-            --bg-surface-alt: #18263D;
-            --text-main: #F1F5F9;
-            --text-muted: #94A3B8;
-            --accent-primary: #D4AF37;
-            --accent-hover: #E3C14B;
-            --accent-soft: rgba(212, 175, 55, 0.14);
-            --accent-text: #E5C558;
-            --border-color: #22324D;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        /* =====================================================================
-           PALETTE 3: FOREST SAGE & WARM CREAM (Organic Modernism)
-           ===================================================================== */
-        [data-palette="sage"] {
-            --bg-main: #F6F7F4;
-            --bg-surface: #FFFFFF;
-            --bg-surface-alt: #EAECE6;
-            --text-main: #1C2B24;
-            --text-muted: #4E5E56;
-            --accent-primary: #2D5A43;
-            --accent-hover: #214432;
-            --accent-soft: #E5EFE9;
-            --accent-text: #224734;
-            --border-color: #D9DFD5;
-        }
-        html.dark[data-palette="sage"] {
-            --bg-main: #0F1714;
-            --bg-surface: #16221D;
-            --bg-surface-alt: #1E2E27;
-            --text-main: #EDF2EF;
-            --text-muted: #98A8A0;
-            --accent-primary: #6BA384;
-            --accent-hover: #7EB697;
-            --accent-soft: rgba(107, 163, 132, 0.15);
-            --accent-text: #8BC4A4;
-            --border-color: #273A32;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
         }
 
-        /* Smooth Color Transitions */
-        body, header, section, div, a, button, input, textarea {
-            transition: background-color 0.28s ease, border-color 0.28s ease, color 0.2s ease, box-shadow 0.28s ease;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        /* Scroll Reveal Utility */
-        .reveal {
-            opacity: 0;
-            transform: translateY(18px);
-            transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+        header {
+            background-color: var(--surface-color);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
         }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .title {
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .header-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--accent-bg);
+            color: var(--primary-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: background-color 0.2s;
+        }
+
+        .contact-links a:hover {
+            background-color: #DBEAFE;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .metric-card {
+            background-color: var(--bg-color);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .metric-card .number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .metric-card .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        section {
+            background-color: var(--surface-color);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        section h2 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-bg);
+        }
+
+        .experience-item, .project-item, .cert-item, .edu-item {
+            margin-bottom: 1.75rem;
+        }
+
+        .experience-item:last-child, .project-item:last-child, .cert-item:last-child, .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .item-subtitle {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .item-date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+            color: var(--text-muted);
+        }
+
+        ul li {
+            margin-bottom: 0.35rem;
+            font-size: 0.95rem;
+        }
+
+        .skills-category {
+            margin-bottom: 1.25rem;
+        }
+
+        .skills-category h3 {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: var(--accent-bg);
+            color: var(--primary-blue);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            header, section {
+                padding: 1.25rem;
+            }
+            .header-content h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
-<body class="bg-bg text-ink antialiased selection:bg-accent selection:text-white">
-
-    <!-- =====================================================================
-         STICKY EXECUTIVE NAVBAR WITH BUILT-IN PALETTE SWITCHER
-         ===================================================================== -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-bg/90 border-b border-borderTone">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Brand Monogram & Name -->
-                <a href="#" class="flex items-center gap-2.5 group">
-                    <span class="w-9 h-9 rounded-xl bg-accent text-white font-serif font-bold text-base flex items-center justify-center shadow-sm group-hover:bg-accentHover transition-colors">
-                        AN
-                    </span>
-                    <span class="font-display font-bold text-lg tracking-tight text-ink">
-                        Anh Nguyen
-                    </span>
-                </a>
-
-                <!-- Desktop Section Links -->
-                <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-muted">
-                    <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
-                    <a href="#project" class="hover:text-accent transition-colors">Key Project</a>
-                    <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
-                    <a href="#education" class="hover:text-accent transition-colors">Education</a>
-                    <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
-                </nav>
-
-                <!-- Theme Controls: Curated Palette Switcher + Light/Dark Toggle -->
-                <div class="flex items-center gap-2 sm:gap-3">
-                    <!-- Interactive Palette Switcher Pill -->
-                    <div class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-surface border border-borderTone shadow-sm" title="Switch Color Palette">
-                        <span class="hidden sm:inline text-[11px] font-semibold uppercase tracking-wider text-muted mr-1">Palette</span>
-                        <button type="button" data-set-palette="terracotta" aria-label="Editorial Slate & Terracotta Palette" title="Editorial Slate & Terracotta" class="palette-dot w-4 h-4 rounded-full bg-[#C2593F] ring-2 ring-offset-2 ring-accent ring-offset-surface transition-transform hover:scale-110"></button>
-                        <button type="button" data-set-palette="navy" aria-label="Midnight Navy & Gold Palette" title="Midnight Navy & Gold" class="palette-dot w-4 h-4 rounded-full bg-[#1B365D] ring-offset-2 ring-offset-surface transition-transform hover:scale-110 opacity-75 hover:opacity-100"></button>
-                        <button type="button" data-set-palette="sage" aria-label="Forest Sage & Cream Palette" title="Forest Sage & Cream" class="palette-dot w-4 h-4 rounded-full bg-[#2D5A43] ring-offset-2 ring-offset-surface transition-transform hover:scale-110 opacity-75 hover:opacity-100"></button>
-                    </div>
-
-                    <!-- Light / Dark Mode Button -->
-                    <button id="theme-toggle" type="button" aria-label="Toggle Light or Dark Mode" class="p-2.5 rounded-xl bg-surface border border-borderTone text-muted hover:text-ink shadow-sm">
-                        <i id="theme-icon" class="fas fa-moon text-sm"></i>
-                    </button>
-
-                    <!-- Mobile Menu Toggle -->
-                    <button id="mobile-menu-btn" type="button" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-surface border border-borderTone text-muted hover:text-ink shadow-sm">
-                        <i class="fas fa-bars text-sm"></i>
-                    </button>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="header-content">
+                <h1>Anh Nguyen</h1>
+                <div class="title">Marketing & Brand Management Professional</div>
+                <p>
+                    Bilingual marketing professional with expertise in brand management, digital marketing, and customer engagement. Proven track record of driving growth through strategic campaigns and data-driven insights across U.S. and international markets.
+                </p>
+                <div class="contact-links">
+                    <a href="tel:6823921073">📞 (682) 392-1073</a>
+                    <a href="mailto:ntandy1012@gmail.com">✉️ ntandy1012@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank">💼 LinkedIn</a>
                 </div>
-            </div>
-        </div>
-
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-surface border-b border-borderTone px-4 pt-2 pb-4 space-y-1">
-            <a href="#experience" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium text-ink hover:bg-surfaceAlt">Experience</a>
-            <a href="#project" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium text-ink hover:bg-surfaceAlt">Key Project</a>
-            <a href="#skills" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium text-ink hover:bg-surfaceAlt">Skills & Competencies</a>
-            <a href="#education" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium text-ink hover:bg-surfaceAlt">Education & Certifications</a>
-            <a href="#contact" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium text-ink hover:bg-surfaceAlt">Contact</a>
-        </div>
-    </header>
-
-    <main>
-        <!-- =====================================================================
-             1. HERO SECTION & EXECUTIVE QUICK STATS
-             ===================================================================== -->
-        <section class="pt-14 pb-20 sm:pt-20 sm:pb-24">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
-                    <!-- Left Column: Identity, Headline, Summary, Contact Bar -->
-                    <div class="lg:col-span-8 space-y-6">
-                        <!-- Location & Availability Pill -->
-                        <div class="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-accentSoft border border-borderTone text-accentText text-xs font-semibold">
-                            <span class="flex items-center gap-1.5">
-                                <i class="fas fa-map-marker-alt"></i> Grand Prairie, TX
-                            </span>
-                            <span class="opacity-40">|</span>
-                            <span class="flex items-center gap-1.5">
-                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                U.S. Citizen • No Work Restrictions
-                            </span>
-                        </div>
-
-                        <!-- Editorial Display Name & Headline -->
-                        <div class="space-y-3">
-                            <h1 class="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-ink leading-[1.12]">
-                                Anh Nguyen
-                            </h1>
-                            <p class="font-display font-semibold text-xl sm:text-2xl text-accent">
-                                Marketing &amp; Brand Management Professional
-                            </p>
-                        </div>
-
-                        <!-- Executive Summary -->
-                        <p class="text-base sm:text-lg text-muted leading-relaxed max-w-2xl">
-                            Bilingual marketing professional with expertise in brand management, digital marketing, and customer engagement. Proven track record of driving growth through strategic campaigns and data-driven insights across U.S. and international markets.
-                        </p>
-
-                        <!-- Action Buttons & Direct Contact Chips -->
-                        <div class="flex flex-wrap items-center gap-3 pt-2">
-                            <a href="#contact" class="px-6 py-3.5 rounded-xl bg-accent hover:bg-accentHover text-white font-semibold text-sm shadow-md transition-transform hover:-translate-y-0.5 inline-flex items-center gap-2">
-                                <span>Connect With Me</span>
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-xl bg-surface hover:bg-surfaceAlt text-ink font-semibold text-sm border border-borderTone transition-transform hover:-translate-y-0.5 inline-flex items-center gap-2">
-                                <i class="fab fa-linkedin text-[#0A66C2] text-base"></i>
-                                <span>LinkedIn</span>
-                            </a>
-
-                            <button type="button" data-copy="ntandy1012@gmail.com" class="copy-trigger px-4 py-3.5 rounded-xl bg-surface hover:bg-surfaceAlt text-muted hover:text-ink font-medium text-sm border border-borderTone inline-flex items-center gap-2" title="Click to copy email">
-                                <i class="far fa-envelope text-accent"></i>
-                                <span>ntandy1012@gmail.com</span>
-                            </button>
-
-                            <button type="button" data-copy="(682) 392-1073" class="copy-trigger px-4 py-3.5 rounded-xl bg-surface hover:bg-surfaceAlt text-muted hover:text-ink font-medium text-sm border border-borderTone inline-flex items-center gap-2" title="Click to copy phone number">
-                                <i class="fas fa-phone-alt text-accent text-xs"></i>
-                                <span>(682) 392-1073</span>
-                            </button>
-                        </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="number">3.85</div>
+                        <div class="label">Current GPA</div>
                     </div>
-
-                    <!-- Right Column: Executive Profile Card -->
-                    <div class="lg:col-span-4">
-                        <div class="p-6 sm:p-7 rounded-3xl bg-surface border border-borderTone shadow-sm space-y-5 relative overflow-hidden">
-                            <div class="flex items-center gap-4">
-                                <div class="w-16 h-16 rounded-2xl bg-accentSoft border border-borderTone flex items-center justify-center font-serif font-bold text-2xl text-accentText shrink-0">
-                                    AN
-                                </div>
-                                <div>
-                                    <div class="font-display font-bold text-lg text-ink">Anh Nguyen</div>
-                                    <div class="text-xs font-medium text-muted">B.S. in Marketing (UT Dallas)</div>
-                                    <div class="text-xs font-medium text-accentText mt-0.5">English (Fluent) • Vietnamese (Native)</div>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-borderTone pt-4 space-y-3 text-sm">
-                                <div class="flex items-start gap-3">
-                                    <i class="fas fa-briefcase text-accent mt-1 w-4 text-center"></i>
-                                    <div>
-                                        <div class="text-xs text-muted">Experience</div>
-                                        <div class="font-medium text-ink">2+ Years in Brand &amp; Marketing</div>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <i class="fas fa-id-card text-accent mt-1 w-4 text-center"></i>
-                                    <div>
-                                        <div class="text-xs text-muted">Work Authorization</div>
-                                        <div class="font-medium text-ink">U.S. Citizen (No Restrictions)</div>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <i class="fas fa-graduation-cap text-accent mt-1 w-4 text-center"></i>
-                                    <div>
-                                        <div class="text-xs text-muted">Academic Standing</div>
-                                        <div class="font-medium text-ink">3.85 Current GPA (3.848 UTD)</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="metric-card">
+                        <div class="number">2+</div>
+                        <div class="label">Years Experience</div>
                     </div>
-
-                </div>
-
-                <!-- Quick Stats Bar (5 Key Metrics from Live Site) -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 mt-14 reveal">
-                    <div class="p-5 sm:p-6 rounded-2xl bg-surface border border-borderTone shadow-sm">
-                        <div class="font-serif font-bold text-3xl sm:text-4xl text-accent">3.85</div>
-                        <div class="text-xs sm:text-sm font-semibold text-ink mt-1.5">Current GPA</div>
-                        <div class="text-xs text-muted mt-0.5">UT Dallas Marketing</div>
+                    <div class="metric-card">
+                        <div class="number">10K+</div>
+                        <div class="label">Users Reached</div>
                     </div>
-
-                    <div class="p-5 sm:p-6 rounded-2xl bg-surface border border-borderTone shadow-sm">
-                        <div class="font-serif font-bold text-3xl sm:text-4xl text-accent">2+</div>
-                        <div class="text-xs sm:text-sm font-semibold text-ink mt-1.5">Years Experience</div>
-                        <div class="text-xs text-muted mt-0.5">U.S. &amp; Global Markets</div>
-                    </div>
-
-                    <div class="p-5 sm:p-6 rounded-2xl bg-surface border border-borderTone shadow-sm">
-                        <div class="font-serif font-bold text-3xl sm:text-4xl text-accent">10K+</div>
-                        <div class="text-xs sm:text-sm font-semibold text-ink mt-1.5">Users Reached</div>
-                        <div class="text-xs text-muted mt-0.5">Bosch in-app operations</div>
-                    </div>
-
-                    <div class="p-5 sm:p-6 rounded-2xl bg-surface border border-borderTone shadow-sm">
-                        <div class="font-serif font-bold text-3xl sm:text-4xl text-accent">+18%</div>
-                        <div class="text-xs sm:text-sm font-semibold text-ink mt-1.5">User Engagement</div>
-                        <div class="text-xs text-muted mt-0.5">Marketing visual redesign</div>
-                    </div>
-
-                    <div class="col-span-2 sm:col-span-1 p-5 sm:p-6 rounded-2xl bg-surface border border-borderTone shadow-sm">
-                        <div class="font-serif font-bold text-3xl sm:text-4xl text-accent">+22%</div>
-                        <div class="text-xs sm:text-sm font-semibold text-ink mt-1.5">Click-Through Rate</div>
-                        <div class="text-xs text-muted mt-0.5">Bosch ProMix app campaign</div>
+                    <div class="metric-card">
+                        <div class="number">+18%</div>
+                        <div class="label">Engagement</div>
                     </div>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <!-- =====================================================================
-             2. PROFESSIONAL EXPERIENCE TIMELINE
-             ===================================================================== -->
-        <section id="experience" class="py-20 bg-surface border-y border-borderTone">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-2xl mb-14 reveal">
-                    <span class="text-accentText bg-accentSoft px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Career History</span>
-                    <h2 class="font-serif font-bold text-3xl sm:text-4xl text-ink mt-3">
-                        Professional Experience
-                    </h2>
-                    <p class="text-muted text-sm sm:text-base mt-2">
-                        Track record across brand management, digital marketing campaigns, retail merchandising, and bilingual stakeholder communication.
-                    </p>
-                </div>
-
-                <!-- Vertical Timeline -->
-                <div class="relative border-l-2 border-borderTone ml-3 sm:ml-5 space-y-10">
-                    
-                    <!-- Role 1: AMN Healthcare -->
-                    <div class="relative pl-8 sm:pl-10 reveal">
-                        <span class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-accent ring-4 ring-surface"></span>
-                        <div class="p-6 sm:p-7 rounded-2xl bg-bg border border-borderTone">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                                <div>
-                                    <h3 class="font-display font-bold text-lg sm:text-xl text-ink">English – Vietnamese Interpreter</h3>
-                                    <div class="text-sm font-semibold text-accent">AMN Healthcare</div>
-                                </div>
-                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-accentSoft text-accentText w-fit">
-                                    Jul 2024 – Present
-                                </span>
-                            </div>
-                            <ul class="space-y-2.5 text-sm text-muted leading-relaxed">
-                                <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></span>
-                                    <span>Provide language interpretation services and customer support to enhance communication and clarity between both parties using language proficiency.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></span>
-                                    <span>Facilitate effective communication in healthcare settings, ensuring accuracy and cultural sensitivity.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Role 2: Polo Ralph Lauren -->
-                    <div class="relative pl-8 sm:pl-10 reveal">
-                        <span class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-muted/50 ring-4 ring-surface"></span>
-                        <div class="p-6 sm:p-7 rounded-2xl bg-bg border border-borderTone">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                                <div>
-                                    <h3 class="font-display font-bold text-lg sm:text-xl text-ink">Brand Ambassador</h3>
-                                    <div class="text-sm font-semibold text-accent">Polo Ralph Lauren <span class="text-muted font-normal">• Texas, United States</span></div>
-                                </div>
-                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-surfaceAlt text-muted w-fit">
-                                    Dec 2023 – Jul 2024
-                                </span>
-                            </div>
-                            <ul class="space-y-2.5 text-sm text-muted leading-relaxed">
-                                <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></span>
-                                    <span>Collaborated with management to improve product presentation, driving higher seasonal sales.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></span>
-                                    <span>Delivered exceptional customer experiences and represented brand values in retail environment.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Role 3: Bosch Group (Brand Management Specialist) -->
-                    <div class="relative pl-8 sm:pl-10 reveal">
-                        <span class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-muted/50 ring-4 ring-surface"></span>
-                        <div class="p-6 sm:p-7 rounded-2xl bg-bg border border-borderTone">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                                <div>
-                                    <h3 class="font-display font-bold text-lg sm:text-xl text-ink">Brand Management Specialist</h3>
-                                    <div class="text-sm font-semibold text-accent">Bosch Group <span class="text-muted font-normal">• Vietnam</span></div>
-                                </div>
-                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-surfaceAlt text-muted w-fit">
-                                    Dec 2022 – Jul 2023
-                                </span>
-                            </div>
-                            <ul class="space-y-2.5 text-sm text-muted leading-relaxed">
-                                <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></span>
-                                    <span>Conducted market and customer data analysis to identify new business opportunities.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></span>
-                                    <span>Coordinated with sales and marketing teams to execute nationwide promotional initiatives.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></span>
-                                    <span>Developed strategic marketing plans based on data-driven insights and market trends.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Role 4: Bosch Group (Brand Management Intern) -->
-                    <div class="relative pl-8 sm:pl-10 reveal">
-                        <span class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-muted/50 ring-4 ring-surface"></span>
-                        <div class="p-6 sm:p-7 rounded-2xl bg-bg border border-borderTone">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                                <div>
-                                    <h3 class="font-display font-bold text-lg sm:text-xl text-ink">Brand Management Intern</h3>
-                                    <div class="text-sm font-semibold text-accent">Bosch Group <span class="text-muted font-normal">• Vietnam</span></div>
-                                </div>
-                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-surfaceAlt text-muted w-fit">
-                                    Jun 2022 – Dec 2022
-                                </span>
-                            </div>
-                            <ul class="space-y-2.5 text-sm text-muted leading-relaxed">
-                                <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></span>
-                                    <span>Managed Bosch's in-app marketing operations, reaching <strong class="text-ink font-semibold">10,000+ active users</strong>.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></span>
-                                    <span>Designed marketing visuals that <strong class="text-ink font-semibold">improved user engagement by 18%</strong>.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></span>
-                                    <span>Supported cross-functional projects in branding, strategy, and app management.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></span>
-                                    <span>Collaborated with development teams to optimize user experience and interface design.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================================
-             3. FEATURED KEY PROJECT SHOWCASE
-             ===================================================================== -->
-        <section id="project" class="py-20">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-2xl mb-12 reveal">
-                    <span class="text-accentText bg-accentSoft px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Featured Campaign</span>
-                    <h2 class="font-serif font-bold text-3xl sm:text-4xl text-ink mt-3">
-                        Featured Project
-                    </h2>
-                </div>
-
-                <!-- Highlighted Executive Case Study Card -->
-                <article class="rounded-3xl bg-surface border border-borderTone shadow-md overflow-hidden reveal">
-                    <div class="p-7 sm:p-10 lg:p-12">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-borderTone">
-                            <div>
-                                <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent mb-2">
-                                    <i class="fas fa-bullhorn"></i>
-                                    <span>Digital Marketing Campaign</span>
-                                </div>
-                                <h3 class="font-serif font-bold text-2xl sm:text-3xl text-ink">
-                                    Marketing Campaign: Bosch ProMix
-                                </h3>
-                            </div>
-                            <span class="px-4 py-1.5 rounded-full bg-accentSoft text-accentText text-xs font-bold whitespace-nowrap w-fit">
-                                Jun 2022 – Dec 2023
-                            </span>
-                        </div>
-
-                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
-                            <!-- Project Deliverables & Methodology -->
-                            <div class="lg:col-span-8 space-y-4 text-sm sm:text-base text-muted leading-relaxed">
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 rounded-lg bg-accentSoft text-accentText flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">01</div>
-                                    <p>
-                                        Developed and executed a comprehensive digital campaign via <strong class="text-ink font-semibold">Bosch ProMix app and social media channels</strong>.
-                                    </p>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 rounded-lg bg-accentSoft text-accentText flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">02</div>
-                                    <p>
-                                        Enhanced app design, <strong class="text-ink font-semibold">improving click-through rates by 22%</strong>.
-                                    </p>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 rounded-lg bg-accentSoft text-accentText flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">03</div>
-                                    <p>
-                                        Created engaging content strategy that <strong class="text-ink font-semibold">increased user retention and platform engagement</strong>.
-                                    </p>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 rounded-lg bg-accentSoft text-accentText flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">04</div>
-                                    <p>
-                                        Analyzed campaign metrics and <strong class="text-ink font-semibold">optimized performance based on user behavior data</strong>.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Project Focus Pillars -->
-                            <div class="lg:col-span-4 p-5 rounded-2xl bg-bg border border-borderTone space-y-4">
-                                <div class="text-xs font-bold uppercase tracking-wider text-ink">Campaign Highlights</div>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1.5 rounded-lg bg-surface border border-borderTone text-xs font-medium text-ink">+22% CTR Growth</span>
-                                    <span class="px-3 py-1.5 rounded-lg bg-surface border border-borderTone text-xs font-medium text-ink">App UI/UX Enhancement</span>
-                                    <span class="px-3 py-1.5 rounded-lg bg-surface border border-borderTone text-xs font-medium text-ink">Social Media Strategy</span>
-                                    <span class="px-3 py-1.5 rounded-lg bg-surface border border-borderTone text-xs font-medium text-ink">User Retention</span>
-                                    <span class="px-3 py-1.5 rounded-lg bg-surface border border-borderTone text-xs font-medium text-ink">Behavior Data Analytics</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- =====================================================================
-             4. SKILLS & EXPERTISE MATRIX
-             ===================================================================== -->
-        <section id="skills" class="py-20 bg-surface border-y border-borderTone">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-2xl mb-14 reveal">
-                    <span class="text-accentText bg-accentSoft px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Capabilities</span>
-                    <h2 class="font-serif font-bold text-3xl sm:text-4xl text-ink mt-3">
-                        Skills &amp; Expertise
-                    </h2>
-                    <p class="text-muted text-sm sm:text-base mt-2">
-                        A multidisciplinary blend of analytics software, creative design tools, brand strategy, and native/fluent bilingual fluency.
-                    </p>
-                </div>
-
-                <!-- 3-Column Skills Matrix matching live site categories -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                    
-                    <!-- Category 1: Technical Skills -->
-                    <div class="p-7 rounded-2xl bg-bg border border-borderTone shadow-sm reveal">
-                        <div class="flex items-center gap-3.5 mb-5">
-                            <div class="w-11 h-11 rounded-xl bg-accentSoft text-accentText flex items-center justify-center text-lg">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <h3 class="font-display font-bold text-lg text-ink">Technical Skills</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Microsoft Office</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Excel</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">SQL</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Tableau</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Power BI</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Canva</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Adobe Photoshop</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Adobe Premiere</span>
-                        </div>
-                    </div>
-
-                    <!-- Category 2: Core Competencies -->
-                    <div class="p-7 rounded-2xl bg-bg border border-borderTone shadow-sm reveal">
-                        <div class="flex items-center gap-3.5 mb-5">
-                            <div class="w-11 h-11 rounded-xl bg-accentSoft text-accentText flex items-center justify-center text-lg">
-                                <i class="fas fa-chess"></i>
-                            </div>
-                            <h3 class="font-display font-bold text-lg text-ink">Core Competencies</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Brand Management</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Marketing Strategy</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Marketing Analytics</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">AI for Marketing</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Customer Engagement</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Data Analysis</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Market Analysis</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Business Analysis</span>
-                            <span class="px-3.5 py-1.5 rounded-xl bg-surface border border-borderTone text-xs font-semibold text-ink">Digital Marketing</span>
-                        </div>
-                    </div>
-
-                    <!-- Category 3: Languages & Eligibility -->
-                    <div class="p-7 rounded-2xl bg-bg border border-borderTone shadow-sm reveal flex flex-col justify-between">
+        <main>
+            <!-- Professional Experience -->
+            <section>
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
                         <div>
-                            <div class="flex items-center gap-3.5 mb-5">
-                                <div class="w-11 h-11 rounded-xl bg-accentSoft text-accentText flex items-center justify-center text-lg">
-                                    <i class="fas fa-language"></i>
-                                </div>
-                                <h3 class="font-display font-bold text-lg text-ink">Languages</h3>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3.5 py-1.5 rounded-xl bg-accentSoft border border-borderTone text-xs font-bold text-accentText">English (Fluent)</span>
-                                <span class="px-3.5 py-1.5 rounded-xl bg-accentSoft border border-borderTone text-xs font-bold text-accentText">Vietnamese (Native)</span>
-                            </div>
+                            <div class="item-title">English – Vietnamese Interpreter</div>
+                            <div class="item-subtitle">AMN Healthcare</div>
                         </div>
-
-                        <div class="mt-6 pt-5 border-t border-borderTone">
-                            <div class="text-xs font-bold uppercase tracking-wider text-muted mb-1.5">Work Authorization</div>
-                            <p class="text-xs text-ink font-medium leading-relaxed">
-                                U.S. Citizen – Eligible to work in the U.S. for internships and full-time employment with no restrictions.
-                            </p>
-                        </div>
+                        <div class="item-date">Jul 2024 - Present</div>
                     </div>
-
+                    <ul>
+                        <li>Provide language interpretation services and customer support to enhance communication and clarity between both parties using language proficiency.</li>
+                        <li>Facilitate effective communication in healthcare settings, ensuring accuracy and cultural sensitivity.</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
 
-        <!-- =====================================================================
-             5. EDUCATION & CERTIFICATIONS
-             ===================================================================== -->
-        <section id="education" class="py-20">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    
-                    <!-- Left 7 Columns: Academic Degrees -->
-                    <div class="lg:col-span-7 space-y-6">
-                        <div class="reveal">
-                            <span class="text-accentText bg-accentSoft px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Academic Background</span>
-                            <h2 class="font-serif font-bold text-3xl sm:text-4xl text-ink mt-3">
-                                Education
-                            </h2>
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Brand Ambassador</div>
+                            <div class="item-subtitle">Polo Ralph Lauren</div>
                         </div>
-
-                        <div class="space-y-4">
-                            <!-- Degree 1: UT Dallas -->
-                            <div class="p-6 rounded-2xl bg-surface border border-borderTone shadow-sm reveal">
-                                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
-                                    <div>
-                                        <h3 class="font-display font-bold text-lg text-ink">The University of Texas at Dallas</h3>
-                                        <p class="text-sm font-medium text-muted mt-0.5">Bachelor's Degree in Marketing</p>
-                                    </div>
-                                    <div class="sm:text-right">
-                                        <span class="inline-block px-3 py-1 rounded-full bg-accentSoft text-accentText text-xs font-bold">
-                                            GPA: 3.848
-                                        </span>
-                                        <div class="text-xs text-muted mt-1">Expected Graduation: 2027 • Richardson, TX</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Degree 2: Tarrant County College -->
-                            <div class="p-6 rounded-2xl bg-surface border border-borderTone shadow-sm reveal">
-                                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
-                                    <div>
-                                        <h3 class="font-display font-bold text-lg text-ink">Tarrant County College</h3>
-                                        <p class="text-sm font-medium text-muted mt-0.5">Associate of Arts in Business</p>
-                                    </div>
-                                    <div class="sm:text-right">
-                                        <span class="inline-block px-3 py-1 rounded-full bg-accentSoft text-accentText text-xs font-bold">
-                                            GPA: 3.905
-                                        </span>
-                                        <div class="text-xs text-muted mt-1">2023 – 2025 • Fort Worth, TX</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Degree 3: HCMUTE -->
-                            <div class="p-6 rounded-2xl bg-surface border border-borderTone shadow-sm reveal">
-                                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
-                                    <div>
-                                        <h3 class="font-display font-bold text-lg text-ink">Ho Chi Minh City University of Technology and Education</h3>
-                                        <p class="text-sm font-medium text-muted mt-0.5">Bachelor's Degree in E-Commerce</p>
-                                    </div>
-                                    <div class="sm:text-right">
-                                        <span class="inline-block px-3 py-1 rounded-full bg-accentSoft text-accentText text-xs font-bold">
-                                            GPA: 3.5
-                                        </span>
-                                        <div class="text-xs text-muted mt-1">2019 – 2023 • Vietnam</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="item-date">Dec 2023 - Jul 2024</div>
                     </div>
-
-                    <!-- Right 5 Columns: Certifications -->
-                    <div class="lg:col-span-5 space-y-6">
-                        <div class="reveal">
-                            <span class="text-accentText bg-accentSoft px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Credentials</span>
-                            <h2 class="font-serif font-bold text-3xl sm:text-4xl text-ink mt-3">
-                                Certifications
-                            </h2>
-                        </div>
-
-                        <div class="space-y-4">
-                            <!-- Certification 1 -->
-                            <div class="p-6 rounded-2xl bg-surface border border-borderTone shadow-sm flex items-start gap-4 reveal">
-                                <div class="w-11 h-11 rounded-xl bg-accentSoft text-accentText flex items-center justify-center text-lg shrink-0">
-                                    <i class="fas fa-certificate"></i>
-                                </div>
-                                <div class="space-y-2">
-                                    <div>
-                                        <h3 class="font-display font-bold text-base text-ink">Marketing Analytics Foundations</h3>
-                                        <div class="text-sm text-muted mt-0.5">LinkedIn Learning • Dec 2025</div>
-                                    </div>
-                                    <div class="flex flex-wrap gap-1.5 pt-1">
-                                        <span class="px-2.5 py-0.5 rounded-md bg-surfaceAlt text-[11px] font-semibold text-ink">Marketing Analytics</span>
-                                        <span class="px-2.5 py-0.5 rounded-md bg-surfaceAlt text-[11px] font-semibold text-ink">Data-Driven Decision Making</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Certification 2 -->
-                            <div class="p-6 rounded-2xl bg-surface border border-borderTone shadow-sm flex items-start gap-4 reveal">
-                                <div class="w-11 h-11 rounded-xl bg-accentSoft text-accentText flex items-center justify-center text-lg shrink-0">
-                                    <i class="fas fa-robot"></i>
-                                </div>
-                                <div class="space-y-2">
-                                    <div>
-                                        <h3 class="font-display font-bold text-base text-ink">AI and Digital Marketing Trends</h3>
-                                        <div class="text-sm text-muted mt-0.5">LinkedIn Learning • Nov 2025</div>
-                                    </div>
-                                    <div class="flex flex-wrap gap-1.5 pt-1">
-                                        <span class="px-2.5 py-0.5 rounded-md bg-surfaceAlt text-[11px] font-semibold text-ink">AI for Marketing</span>
-                                        <span class="px-2.5 py-0.5 rounded-md bg-surfaceAlt text-[11px] font-semibold text-ink">Digital Marketing</span>
-                                        <span class="px-2.5 py-0.5 rounded-md bg-surfaceAlt text-[11px] font-semibold text-ink">Marketing Strategy</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <ul>
+                        <li>Collaborated with management to improve product presentation, driving higher seasonal sales.</li>
+                        <li>Delivered exceptional customer experiences and represented brand values in retail environment.</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
 
-        <!-- =====================================================================
-             6. INTERACTIVE CONTACT SECTION
-             ===================================================================== -->
-        <section id="contact" class="py-20 bg-surface border-t border-borderTone">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    
-                    <!-- Left Column: Interactive Contact Card with One-Click Copy -->
-                    <div class="lg:col-span-5 space-y-6 reveal">
-                        <span class="text-accentText bg-accentSoft px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Get In Touch</span>
-                        <h2 class="font-serif font-bold text-3xl sm:text-4xl text-ink">
-                            Let's discuss brand &amp; marketing strategy.
-                        </h2>
-                        <p class="text-sm sm:text-base text-muted leading-relaxed">
-                            <strong class="text-ink font-semibold">U.S. Citizen</strong> – Eligible to work in the U.S. for internships and full-time employment with no restrictions.
-                        </p>
-
-                        <!-- Direct Contact Copy Cards -->
-                        <div class="space-y-3">
-                            <!-- Email One-Click Copy -->
-                            <div class="p-4 rounded-2xl bg-bg border border-borderTone flex items-center justify-between gap-3">
-                                <div class="min-w-0">
-                                    <div class="text-xs font-medium text-muted">Email Address</div>
-                                    <div class="text-sm font-bold text-ink truncate mt-0.5">ntandy1012@gmail.com</div>
-                                </div>
-                                <button type="button" data-copy="ntandy1012@gmail.com" class="copy-btn px-3.5 py-2 rounded-xl bg-surface hover:bg-surfaceAlt text-xs font-semibold text-ink border border-borderTone shrink-0 inline-flex items-center gap-1.5">
-                                    <i class="far fa-copy text-accent"></i>
-                                    <span>Copy</span>
-                                </button>
-                            </div>
-
-                            <!-- Phone One-Click Copy -->
-                            <div class="p-4 rounded-2xl bg-bg border border-borderTone flex items-center justify-between gap-3">
-                                <div>
-                                    <div class="text-xs font-medium text-muted">Phone Number</div>
-                                    <div class="text-sm font-bold text-ink mt-0.5">(682) 392-1073</div>
-                                </div>
-                                <button type="button" data-copy="(682) 392-1073" class="copy-btn px-3.5 py-2 rounded-xl bg-surface hover:bg-surfaceAlt text-xs font-semibold text-ink border border-borderTone shrink-0 inline-flex items-center gap-1.5">
-                                    <i class="far fa-copy text-accent"></i>
-                                    <span>Copy</span>
-                                </button>
-                            </div>
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Brand Management Specialist</div>
+                            <div class="item-subtitle">Bosch Group (Vietnam)</div>
                         </div>
-
-                        <!-- LinkedIn CTA Button -->
-                        <div class="pt-1">
-                            <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-5 rounded-xl bg-bg hover:bg-surfaceAlt border border-borderTone text-ink font-semibold text-sm flex items-center justify-center gap-2.5">
-                                <i class="fab fa-linkedin text-[#0A66C2] text-lg"></i>
-                                <span>Connect on LinkedIn</span>
-                                <i class="fas fa-external-link-alt text-xs text-muted"></i>
-                            </a>
-                        </div>
+                        <div class="item-date">Dec 2022 - Jul 2023</div>
                     </div>
-
-                    <!-- Right Column: Clean Contact Form UI -->
-                    <div class="lg:col-span-7 reveal">
-                        <form id="contact-form" class="p-6 sm:p-8 rounded-3xl bg-bg border border-borderTone shadow-sm space-y-5">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <div>
-                                    <label for="sender-name" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-2">Your Name</label>
-                                    <input type="text" id="sender-name" name="name" required placeholder="Alex Morgan" class="w-full px-4 py-3 rounded-xl bg-surface border border-borderTone text-ink text-sm focus:outline-none focus:ring-2 focus:ring-accent">
-                                </div>
-                                <div>
-                                    <label for="sender-email" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-2">Email Address</label>
-                                    <input type="email" id="sender-email" name="email" required placeholder="alex@company.com" class="w-full px-4 py-3 rounded-xl bg-surface border border-borderTone text-ink text-sm focus:outline-none focus:ring-2 focus:ring-accent">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label for="sender-subject" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-2">Subject</label>
-                                <input type="text" id="sender-subject" name="subject" required placeholder="Marketing Analytics / Brand Strategy Opportunity" class="w-full px-4 py-3 rounded-xl bg-surface border border-borderTone text-ink text-sm focus:outline-none focus:ring-2 focus:ring-accent">
-                            </div>
-
-                            <div>
-                                <label for="sender-message" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-2">Message</label>
-                                <textarea id="sender-message" name="message" rows="4" required placeholder="Hello Anh, I reviewed your portfolio and would love to connect regarding..." class="w-full px-4 py-3 rounded-xl bg-surface border border-borderTone text-ink text-sm focus:outline-none focus:ring-2 focus:ring-accent resize-none"></textarea>
-                            </div>
-
-                            <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-accent hover:bg-accentHover text-white font-semibold text-sm shadow-md transition-transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                                <span>Send Message</span>
-                                <i class="fas fa-paper-plane text-xs"></i>
-                            </button>
-
-                            <!-- Inline Confirmation Message (No alert() used) -->
-                            <div id="form-status" class="hidden p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-sm font-medium flex items-center gap-3">
-                                <i class="fas fa-check-circle text-emerald-500 text-base"></i>
-                                <span>Thank you! Your message for Anh Nguyen has been recorded.</span>
-                            </div>
-                        </form>
-                    </div>
-
+                    <ul>
+                        <li>Conducted market and customer data analysis to identify new business opportunities.</li>
+                        <li>Coordinated with sales and marketing teams to execute nationwide promotional initiatives.</li>
+                        <li>Developed strategic marketing plans based on data-driven insights and market trends.</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- =====================================================================
-         FOOTER
-         ===================================================================== -->
-    <footer class="py-10 bg-bg border-t border-borderTone text-xs sm:text-sm text-muted">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div>
-                    <div class="font-display font-bold text-ink text-sm sm:text-base">
-                        Anh Nguyen - E-Marketing &amp; Brand Management Professional
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Brand Management Intern</div>
+                            <div class="item-subtitle">Bosch Group (Vietnam)</div>
+                        </div>
+                        <div class="item-date">Jun 2022 - Dec 2022</div>
                     </div>
-                    <div class="text-xs text-muted mt-1">
-                        U.S. Citizen – Eligible to work in the U.S. for internships and full-time employment with no restrictions.
+                    <ul>
+                        <li>Managed Bosch's in-app marketing operations, reaching 10,000+ active users.</li>
+                        <li>Designed marketing visuals that improved user engagement by 18%.</li>
+                        <li>Supported cross-functional projects in branding, strategy, and app management.</li>
+                        <li>Collaborated with development teams to optimize user experience and interface design.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Featured Project -->
+            <section>
+                <h2>Featured Project</h2>
+                <div class="project-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Marketing Campaign: Bosch ProMix</div>
+                            <div class="item-subtitle">Digital Marketing Campaign</div>
+                        </div>
+                        <div class="item-date">Jun 2022 - Dec 2023</div>
+                    </div>
+                    <ul>
+                        <li>Developed and executed a comprehensive digital campaign via Bosch ProMix app and social media channels.</li>
+                        <li>Enhanced app design, improving click-through rates by 22%.</li>
+                        <li>Created engaging content strategy that increased user retention and platform engagement.</li>
+                        <li>Analyzed campaign metrics and optimized performance based on user behavior data.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section>
+                <h2>Certifications</h2>
+                <div class="cert-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Marketing Analytics Foundations</div>
+                            <div class="item-subtitle">LinkedIn Learning</div>
+                        </div>
+                        <div class="item-date">Dec 2025</div>
+                    </div>
+                    <ul>
+                        <li>Skills: Marketing Analytics, Data-Driven Decision Making</li>
+                    </ul>
+                </div>
+                <div class="cert-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">AI and Digital Marketing Trends</div>
+                            <div class="item-subtitle">LinkedIn Learning</div>
+                        </div>
+                        <div class="item-date">Nov 2025</div>
+                    </div>
+                    <ul>
+                        <li>Skills: AI for Marketing, Digital Marketing, Marketing Strategy</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Skills & Expertise -->
+            <section>
+                <h2>Skills & Expertise</h2>
+                <div class="skills-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Microsoft Office</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">Adobe Photoshop</span>
+                        <span class="skill-tag">Adobe Premiere</span>
                     </div>
                 </div>
-                <div class="flex flex-wrap items-center gap-4 text-xs sm:text-sm">
-                    <a href="tel:6823921073" class="hover:text-accent transition-colors">(682) 392-1073</a>
-                    <span>•</span>
-                    <a href="mailto:ntandy1012@gmail.com" class="hover:text-accent transition-colors">ntandy1012@gmail.com</a>
-                    <span>•</span>
-                    <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">LinkedIn</a>
+                <div class="skills-category">
+                    <h3>Core Competencies</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Brand Management</span>
+                        <span class="skill-tag">Marketing Strategy</span>
+                        <span class="skill-tag">Marketing Analytics</span>
+                        <span class="skill-tag">AI for Marketing</span>
+                        <span class="skill-tag">Customer Engagement</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Market Analysis</span>
+                        <span class="skill-tag">Business Analysis</span>
+                        <span class="skill-tag">Digital Marketing</span>
+                    </div>
                 </div>
-            </div>
-            <div class="pt-4 border-t border-borderTone flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-                <div>
-                    &copy; <span id="year">2026</span> Anh Nguyen. All rights reserved.
+                <div class="skills-category">
+                    <h3>Languages</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">English (Fluent)</span>
+                        <span class="skill-tag">Vietnamese (Native)</span>
+                    </div>
                 </div>
-                <a href="#" class="inline-flex items-center gap-1.5 font-semibold text-ink hover:text-accent transition-colors">
-                    Back to top <i class="fas fa-arrow-up text-xs"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
+            </section>
 
-    <!-- Floating Copy Notification Toast -->
-    <div id="copy-toast" class="fixed bottom-5 right-5 z-50 px-4 py-3 rounded-xl bg-ink text-surface text-xs font-semibold shadow-xl flex items-center gap-2 opacity-0 pointer-events-none translate-y-2 transition-all duration-300">
-        <i class="fas fa-check-circle text-emerald-400"></i>
-        <span id="copy-toast-text">Copied to clipboard</span>
+            <!-- Education -->
+            <section>
+                <h2>Education</h2>
+                <div class="edu-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Bachelor's Degree in Marketing</div>
+                            <div class="item-subtitle">The University of Texas at Dallas (Richardson, TX)</div>
+                        </div>
+                        <div class="item-date">Expected Graduation: 2027 | GPA: 3.848</div>
+                    </div>
+                </div>
+                <div class="edu-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Associate of Arts in Business</div>
+                            <div class="item-subtitle">Tarrant County College (Fort Worth, TX)</div>
+                        </div>
+                        <div class="item-date">2023 - 2025 | GPA: 3.905</div>
+                    </div>
+                </div>
+                <div class="edu-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Bachelor's Degree in E-Commerce</div>
+                            <div class="item-subtitle">Ho Chi Minh City University of Technology and Education (Vietnam)</div>
+                        </div>
+                        <div class="item-date">2019 - 2023 | GPA: 3.5</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Information -->
+            <section>
+                <h2>Additional Information</h2>
+                <ul>
+                    <li><strong>Work Authorization:</strong> U.S. Citizen – Eligible to work in the U.S. for internships and full-time employment with no restrictions.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>Anh Nguyen</strong> - E-Marketing & Brand Management Professional</p>
+            <p>© 2026 Anh Nguyen. All rights reserved.</p>
+        </footer>
     </div>
-
-    <!-- =====================================================================
-         INTERACTIVE SCRIPT: PALETTE SWITCHER, DARK MODE, COPY & SCROLL REVEAL
-         ===================================================================== -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const htmlEl = document.documentElement;
-            document.getElementById('year').textContent = new Date().getFullYear();
-
-            // 1. Curated Palette Switcher (Editorial Terracotta, Midnight Navy, Forest Sage)
-            const paletteButtons = document.querySelectorAll('[data-set-palette]');
-            const savedPalette = localStorage.getItem('anh-portfolio-palette') || 'terracotta';
-
-            function applyPalette(paletteName) {
-                htmlEl.setAttribute('data-palette', paletteName);
-                localStorage.setItem('anh-portfolio-palette', paletteName);
-
-                paletteButtons.forEach(btn => {
-                    const isSelected = btn.getAttribute('data-set-palette') === paletteName;
-                    if (isSelected) {
-                        btn.classList.add('ring-2', 'ring-accent', 'opacity-100', 'scale-110');
-                        btn.classList.remove('opacity-75');
-                    } else {
-                        btn.classList.remove('ring-2', 'ring-accent', 'scale-110');
-                        btn.classList.add('opacity-75');
-                    }
-                });
-            }
-
-            applyPalette(savedPalette);
-            paletteButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    applyPalette(btn.getAttribute('data-set-palette'));
-                });
-            });
-
-            // 2. Light / Dark Mode Toggle
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeIcon = document.getElementById('theme-icon');
-            const savedTheme = localStorage.getItem('anh-portfolio-theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                htmlEl.classList.add('dark');
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-            }
-
-            themeToggle.addEventListener('click', () => {
-                htmlEl.classList.toggle('dark');
-                const isDark = htmlEl.classList.contains('dark');
-                localStorage.setItem('anh-portfolio-theme', isDark ? 'dark' : 'light');
-                themeIcon.classList.toggle('fa-moon', !isDark);
-                themeIcon.classList.toggle('fa-sun', isDark);
-            });
-
-            // 3. Mobile Navigation Menu
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            document.querySelectorAll('.mobile-link').forEach(link => {
-                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-            });
-
-            // 4. One-Click Copy for Email & Phone with Toast Notification
-            const copyToast = document.getElementById('copy-toast');
-            const copyToastText = document.getElementById('copy-toast-text');
-            let toastTimeout;
-
-            function copyToClipboard(text, btnElement) {
-                const tempInput = document.createElement('input');
-                tempInput.value = text;
-                document.body.appendChild(tempInput);
-                tempInput.select();
-                document.execCommand('copy');
-                document.body.removeChild(tempInput);
-
-                // Show toast
-                copyToastText.textContent = `Copied: ${text}`;
-                copyToast.classList.remove('opacity-0', 'translate-y-2');
-                clearTimeout(toastTimeout);
-                toastTimeout = setTimeout(() => {
-                    copyToast.classList.add('opacity-0', 'translate-y-2');
-                }, 2400);
-
-                // Temporary button feedback if applicable
-                if (btnElement && btnElement.classList.contains('copy-btn')) {
-                    const originalHTML = btnElement.innerHTML;
-                    btnElement.innerHTML = '<i class="fas fa-check text-emerald-500"></i><span>Copied</span>';
-                    setTimeout(() => {
-                        btnElement.innerHTML = originalHTML;
-                    }, 2000);
-                }
-            }
-
-            document.querySelectorAll('[data-copy]').forEach(el => {
-                el.addEventListener('click', () => {
-                    copyToClipboard(el.getAttribute('data-copy'), el);
-                });
-            });
-
-            // 5. Contact Form Submission Feedback
-            const contactForm = document.getElementById('contact-form');
-            const formStatus = document.getElementById('form-status');
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                formStatus.classList.remove('hidden');
-                contactForm.reset();
-                setTimeout(() => {
-                    formStatus.classList.add('hidden');
-                }, 5000);
-            });
-
-            // 6. Subtle Scroll Reveal Animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        });
-    </script>
 </body>
 </html>
