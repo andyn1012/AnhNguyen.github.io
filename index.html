@@ -16,7 +16,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Tailwind Custom Warm Beige & Editorial Color Configuration -->
+    <!-- Tailwind Custom White, Black & Shades of Blue Color Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -27,17 +27,17 @@
                         serif: ['Playfair Display', 'serif'],
                     },
                     colors: {
-                        beigeMain: '#F5EFE6',      /* Warm Linen Beige Background */
-                        beigeAlt: '#EDE4D7',       /* Soft Sand Secondary Background */
-                        creamCard: '#FCF9F4',      /* Warm Ivory/Cream Card Surface */
-                        espresso: '#2C241E',       /* Deep Espresso Ink Typography */
-                        taupeMuted: '#685D54',     /* Warm Taupe Muted Text */
-                        terracotta: '#B85D3B',     /* Terracotta Primary Accent */
-                        terracottaDark: '#9A4A2C', /* Deeper Terracotta Hover */
-                        terracottaSoft: '#F3E3DA', /* Soft Blush-Beige Tag Fill */
-                        sage: '#4F6D5A',           /* Warm Sage Olive Secondary Accent */
-                        sageSoft: '#E3ECE5',       /* Soft Sage Pill Fill */
-                        sandBorder: '#DFD5C7',     /* Warm Sand Border */
+                        beigeMain: '#FFFFFF',         /* Crisp Pure White Primary Background */
+                        beigeAlt: '#F8FAFC',          /* Cool Slate-White Secondary Background */
+                        creamCard: '#FFFFFF',         /* Pure White Card Surface */
+                        espresso: '#09090B',          /* Deep Jet Black Primary Typography */
+                        taupeMuted: '#52525B',        /* Neutral Slate Gray Muted Typography */
+                        editorialBlue: '#1D4ED8',     /* Vibrant Royal/Cobalt Blue Primary Accent */
+                        editorialBlueDark: '#1E3A8A', /* Deep Navy Blue Hover */
+                        editorialBlueSoft: '#EFF6FF', /* Soft Ice-Blue Tag/Pill Fill */
+                        sage: '#0369A1',              /* Deep Ocean Blue Secondary Accent */
+                        sageSoft: '#F0F9FF',          /* Soft Sky-Blue Secondary Pill Fill */
+                        sandBorder: '#E2E8F0',        /* Crisp Cool Slate Border */
                     }
                 }
             }
@@ -47,8 +47,8 @@
     <!-- Editorial Styling & Scroll Reveal Animations -->
     <style>
         body {
-            background-color: #F5EFE6;
-            color: #2C241E;
+            background-color: #FFFFFF;
+            color: #09090B;
         }
 
         /* Subtle Scroll Reveal Utility */
@@ -63,17 +63,17 @@
         }
     </style>
 </head>
-<body class="bg-beigeMain text-espresso antialiased selection:bg-terracotta selection:text-white">
+<body class="bg-beigeMain text-espresso antialiased selection:bg-editorialBlue selection:text-white">
 
     <!-- =====================================================================
          STICKY EDITORIAL NAVBAR
          ===================================================================== -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-beigeMain/90 border-b border-sandBorder">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/95 border-b border-sandBorder">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Brand Monogram & Name -->
                 <a href="#" class="flex items-center gap-2.5 group">
-                    <span class="w-9 h-9 rounded-xl bg-terracotta text-creamCard font-serif font-bold text-base flex items-center justify-center shadow-sm group-hover:bg-terracottaDark transition-colors">
+                    <span class="w-9 h-9 rounded-xl bg-espresso text-white font-serif font-bold text-base flex items-center justify-center shadow-sm group-hover:bg-editorialBlue transition-colors">
                         AN
                     </span>
                     <span class="font-display font-bold text-lg tracking-tight text-espresso">
@@ -83,11 +83,11 @@
 
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-taupeMuted">
-                    <a href="#experience" class="hover:text-terracotta transition-colors">Experience</a>
-                    <a href="#project" class="hover:text-terracotta transition-colors">Featured Project</a>
-                    <a href="#skills" class="hover:text-terracotta transition-colors">Skills</a>
-                    <a href="#education" class="hover:text-terracotta transition-colors">Education</a>
-                    <a href="#contact" class="px-4 py-2 rounded-xl bg-terracotta hover:bg-terracottaDark text-creamCard font-semibold transition-colors shadow-sm">
+                    <a href="#experience" class="hover:text-editorialBlue transition-colors">Experience</a>
+                    <a href="#project" class="hover:text-editorialBlue transition-colors">Featured Project</a>
+                    <a href="#skills" class="hover:text-editorialBlue transition-colors">Skills</a>
+                    <a href="#education" class="hover:text-editorialBlue transition-colors">Education</a>
+                    <a href="#contact" class="px-4 py-2 rounded-xl bg-editorialBlue hover:bg-editorialBlueDark text-white font-semibold transition-colors shadow-sm">
                         Contact
                     </a>
                 </nav>
@@ -105,7 +105,7 @@
             <a href="#project" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium text-espresso hover:bg-beigeAlt">Featured Project</a>
             <a href="#skills" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium text-espresso hover:bg-beigeAlt">Skills &amp; Expertise</a>
             <a href="#education" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium text-espresso hover:bg-beigeAlt">Education &amp; Certifications</a>
-            <a href="#contact" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-semibold text-terracotta hover:bg-beigeAlt">Contact</a>
+            <a href="#contact" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-semibold text-editorialBlue hover:bg-beigeAlt">Contact</a>
         </div>
     </header>
 
@@ -120,13 +120,13 @@
                     <!-- Left Column: Identity, Headline, Summary, Contact Bar -->
                     <div class="lg:col-span-8 space-y-6">
                         <!-- Location & Availability Pill -->
-                        <div class="inline-flex flex-wrap items-center gap-2.5 px-4 py-1.5 rounded-full bg-sageSoft border border-sage/20 text-sage text-xs font-semibold">
+                        <div class="inline-flex flex-wrap items-center gap-2.5 px-4 py-1.5 rounded-full bg-sageSoft border border-sky-200 text-sage text-xs font-semibold">
                             <span class="flex items-center gap-1.5">
                                 <i class="fas fa-map-marker-alt"></i> Grand Prairie, TX
                             </span>
                             <span class="opacity-40">|</span>
                             <span class="flex items-center gap-1.5">
-                                <span class="w-2 h-2 rounded-full bg-sage"></span>
+                                <span class="w-2 h-2 rounded-full bg-editorialBlue"></span>
                                 U.S. Citizen • No Work Restrictions
                             </span>
                         </div>
@@ -136,9 +136,32 @@
                             <h1 class="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-espresso leading-[1.12]">
                                 Anh Nguyen
                             </h1>
-                            <p class="font-display font-semibold text-xl sm:text-2xl text-terracotta">
+                            <p class="font-display font-semibold text-xl sm:text-2xl text-editorialBlue">
                                 Marketing &amp; Brand Management Professional
                             </p>
+
+                            <!-- UT Dallas Institutional Affiliation Badge -->
+                            <div class="pt-1">
+                                <div class="inline-flex items-center gap-3.5 px-4 py-2.5 rounded-2xl bg-beigeAlt border border-sandBorder shadow-sm">
+                                    <!-- Crisp UTD Shield & Comet Monogram SVG -->
+                                    <div class="w-10 h-10 rounded-xl bg-espresso text-white flex items-center justify-center shrink-0 shadow-xs">
+                                        <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="UT Dallas Emblem">
+                                            <path d="M20 4L33 9.5V20.5C33 28.4 27.4 34.8 20 37C12.6 34.8 7 28.4 7 20.5V9.5L20 4Z" fill="#1E3A8A" stroke="#60A5FA" stroke-width="1.5"/>
+                                            <path d="M10 24C15.5 21.5 22.5 17 30 10.5" stroke="#93C5FD" stroke-width="1.8" stroke-linecap="round"/>
+                                            <circle cx="30" cy="10.5" r="2" fill="#FFFFFF"/>
+                                            <text x="20" y="25.5" text-anchor="middle" fill="#FFFFFF" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="800" font-size="9.5" letter-spacing="0.5">UTD</text>
+                                        </svg>
+                                    </div>
+                                    <div class="leading-tight">
+                                        <div class="font-display font-bold text-xs sm:text-sm text-espresso">
+                                            The University of Texas at Dallas
+                                        </div>
+                                        <div class="text-[11px] sm:text-xs font-medium text-taupeMuted mt-0.5">
+                                            B.S. in Marketing • Naveen Jindal School of Management
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Executive Summary -->
@@ -148,18 +171,18 @@
 
                         <!-- Action Buttons & Direct Contact Chips -->
                         <div class="flex flex-wrap items-center gap-3 pt-2">
-                            <a href="mailto:ntandy1012@gmail.com" class="px-6 py-3.5 rounded-xl bg-terracotta hover:bg-terracottaDark text-creamCard font-semibold text-sm shadow-md transition-all hover:-translate-y-0.5 inline-flex items-center gap-2">
+                            <a href="mailto:ntandy1012@gmail.com" class="px-6 py-3.5 rounded-xl bg-editorialBlue hover:bg-editorialBlueDark text-white font-semibold text-sm shadow-md shadow-blue-900/10 transition-all hover:-translate-y-0.5 inline-flex items-center gap-2">
                                 <i class="far fa-envelope"></i>
                                 <span>ntandy1012@gmail.com</span>
                             </a>
 
-                            <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-xl bg-creamCard hover:bg-beigeAlt text-espresso font-semibold text-sm border border-sandBorder transition-all hover:-translate-y-0.5 inline-flex items-center gap-2 shadow-sm">
-                                <i class="fab fa-linkedin text-sage text-base"></i>
+                            <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-xl bg-white hover:bg-beigeAlt text-espresso font-semibold text-sm border border-sandBorder transition-all hover:-translate-y-0.5 inline-flex items-center gap-2 shadow-sm">
+                                <i class="fab fa-linkedin text-editorialBlue text-base"></i>
                                 <span>LinkedIn Profile</span>
                             </a>
 
-                            <button type="button" data-copy="(682) 392-1073" class="copy-trigger px-4 py-3.5 rounded-xl bg-creamCard hover:bg-beigeAlt text-taupeMuted hover:text-espresso font-medium text-sm border border-sandBorder inline-flex items-center gap-2 shadow-sm transition-colors" title="Click to copy phone number">
-                                <i class="fas fa-phone-alt text-terracotta text-xs"></i>
+                            <button type="button" data-copy="(682) 392-1073" class="copy-trigger px-4 py-3.5 rounded-xl bg-white hover:bg-beigeAlt text-taupeMuted hover:text-espresso font-medium text-sm border border-sandBorder inline-flex items-center gap-2 shadow-sm transition-colors" title="Click to copy phone number">
+                                <i class="fas fa-phone-alt text-editorialBlue text-xs"></i>
                                 <span>(682) 392-1073</span>
                             </button>
                         </div>
@@ -167,21 +190,24 @@
 
                     <!-- Right Column: Executive Profile Card -->
                     <div class="lg:col-span-4">
-                        <div class="p-6 sm:p-7 rounded-3xl bg-creamCard border border-sandBorder shadow-sm space-y-5 relative overflow-hidden">
+                        <div class="p-6 sm:p-7 rounded-3xl bg-white border border-sandBorder shadow-sm space-y-5 relative overflow-hidden">
                             <div class="flex items-center gap-4">
-                                <div class="w-16 h-16 rounded-2xl bg-terracottaSoft border border-terracotta/20 flex items-center justify-center font-serif font-bold text-2xl text-terracotta shrink-0">
+                                <div class="w-16 h-16 rounded-2xl bg-espresso text-white flex items-center justify-center font-serif font-bold text-2xl shrink-0 shadow-sm">
                                     AN
                                 </div>
                                 <div>
                                     <div class="font-display font-bold text-lg text-espresso">Anh Nguyen</div>
-                                    <div class="text-xs font-medium text-taupeMuted">B.S. in Marketing (UT Dallas)</div>
-                                    <div class="text-xs font-semibold text-sage mt-0.5">English (Fluent) • Vietnamese (Native)</div>
+                                    <div class="inline-flex items-center gap-1.5 text-xs font-medium text-taupeMuted mt-0.5">
+                                        <span class="inline-flex items-center justify-center px-1.5 py-0.5 rounded bg-editorialBlueSoft text-editorialBlue font-display font-extrabold text-[10px] tracking-tight border border-blue-200">UTD</span>
+                                        <span>B.S. in Marketing (UT Dallas)</span>
+                                    </div>
+                                    <div class="text-xs font-semibold text-sage mt-1">English (Fluent) • Vietnamese (Native)</div>
                                 </div>
                             </div>
 
                             <div class="border-t border-sandBorder pt-4 space-y-3 text-sm">
                                 <div class="flex items-start gap-3">
-                                    <i class="fas fa-briefcase text-terracotta mt-1 w-4 text-center"></i>
+                                    <i class="fas fa-briefcase text-editorialBlue mt-1 w-4 text-center"></i>
                                     <div>
                                         <div class="text-xs text-taupeMuted">Experience</div>
                                         <div class="font-medium text-espresso">2+ Years in Brand &amp; Marketing</div>
@@ -195,7 +221,7 @@
                                     </div>
                                 </div>
                                 <div class="flex items-start gap-3">
-                                    <i class="fas fa-graduation-cap text-terracotta mt-1 w-4 text-center"></i>
+                                    <i class="fas fa-graduation-cap text-editorialBlue mt-1 w-4 text-center"></i>
                                     <div>
                                         <div class="text-xs text-taupeMuted">Academic Standing</div>
                                         <div class="font-medium text-espresso">3.85 Current GPA (3.848 UTD)</div>
@@ -210,7 +236,7 @@
                 <!-- Quick Stats Bar (5 Key Metrics) -->
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 mt-14 reveal">
                     <div class="p-5 sm:p-6 rounded-2xl bg-creamCard border border-sandBorder shadow-sm">
-                        <div class="font-serif font-bold text-3xl sm:text-4xl text-terracotta">3.85</div>
+                        <div class="font-serif font-bold text-3xl sm:text-4xl text-editorialBlue">3.85</div>
                         <div class="text-xs sm:text-sm font-semibold text-espresso mt-1.5">Current GPA</div>
                         <div class="text-xs text-taupeMuted mt-0.5">UT Dallas Marketing</div>
                     </div>
@@ -222,7 +248,7 @@
                     </div>
 
                     <div class="p-5 sm:p-6 rounded-2xl bg-creamCard border border-sandBorder shadow-sm">
-                        <div class="font-serif font-bold text-3xl sm:text-4xl text-terracotta">10K+</div>
+                        <div class="font-serif font-bold text-3xl sm:text-4xl text-editorialBlue">10K+</div>
                         <div class="text-xs sm:text-sm font-semibold text-espresso mt-1.5">Users Reached</div>
                         <div class="text-xs text-taupeMuted mt-0.5">Bosch in-app operations</div>
                     </div>
@@ -234,7 +260,7 @@
                     </div>
 
                     <div class="col-span-2 sm:col-span-1 p-5 sm:p-6 rounded-2xl bg-creamCard border border-sandBorder shadow-sm">
-                        <div class="font-serif font-bold text-3xl sm:text-4xl text-terracotta">+22%</div>
+                        <div class="font-serif font-bold text-3xl sm:text-4xl text-editorialBlue">+22%</div>
                         <div class="text-xs sm:text-sm font-semibold text-espresso mt-1.5">Click-Through Rate</div>
                         <div class="text-xs text-taupeMuted mt-0.5">Bosch ProMix app campaign</div>
                     </div>
@@ -248,7 +274,7 @@
         <section id="experience" class="py-20 bg-beigeAlt border-y border-sandBorder">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-2xl mb-14 reveal">
-                    <span class="text-terracotta bg-terracottaSoft px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Career History</span>
+                    <span class="text-editorialBlue bg-editorialBlueSoft px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Career History</span>
                     <h2 class="font-serif font-bold text-3xl sm:text-4xl text-espresso mt-3">
                         Professional Experience
                     </h2>
@@ -262,24 +288,36 @@
                     
                     <!-- Role 1: AMN Healthcare -->
                     <div class="relative pl-8 sm:pl-10 reveal">
-                        <span class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-terracotta ring-4 ring-beigeAlt"></span>
+                        <span class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-editorialBlue ring-4 ring-beigeAlt"></span>
                         <div class="p-6 sm:p-7 rounded-2xl bg-creamCard border border-sandBorder shadow-sm">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                                <div>
-                                    <h3 class="font-display font-bold text-lg sm:text-xl text-espresso">English – Vietnamese Interpreter</h3>
-                                    <div class="text-sm font-semibold text-terracotta">AMN Healthcare</div>
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+                                <div class="flex items-center gap-3.5">
+                                    <!-- AMN Healthcare Logo Badge -->
+                                    <div class="w-12 h-12 rounded-xl bg-white border border-sandBorder shadow-xs flex items-center justify-center shrink-0 p-1.5" title="AMN Healthcare">
+                                        <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="AMN Healthcare Logo">
+                                            <rect x="2" y="2" width="44" height="44" rx="9" fill="#EFF6FF"/>
+                                            <path d="M13 18C18 11.5 30 11.5 35 18" stroke="#0369A1" stroke-width="2.4" stroke-linecap="round"/>
+                                            <circle cx="24" cy="11.5" r="2" fill="#1D4ED8"/>
+                                            <text x="24" y="29" text-anchor="middle" fill="#1E3A8A" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="800" font-size="11.5" letter-spacing="0.4">AMN</text>
+                                            <text x="24" y="37" text-anchor="middle" fill="#0369A1" font-family="Inter, sans-serif" font-weight="700" font-size="5.2" letter-spacing="0.6">HEALTHCARE</text>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display font-bold text-lg sm:text-xl text-espresso">English – Vietnamese Interpreter</h3>
+                                        <div class="text-sm font-semibold text-editorialBlue">AMN Healthcare</div>
+                                    </div>
                                 </div>
-                                <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold bg-sageSoft text-sage w-fit">
+                                <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold bg-editorialBlueSoft text-editorialBlue border border-blue-200 w-fit">
                                     Jul 2024 – Present
                                 </span>
                             </div>
                             <ul class="space-y-2.5 text-sm text-taupeMuted leading-relaxed">
                                 <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 shrink-0"></span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-editorialBlue mt-2 shrink-0"></span>
                                     <span>Provide language interpretation services and customer support to enhance communication and clarity between both parties using language proficiency.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 shrink-0"></span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-editorialBlue mt-2 shrink-0"></span>
                                     <span>Facilitate effective communication in healthcare settings, ensuring accuracy and cultural sensitivity.</span>
                                 </li>
                             </ul>
@@ -290,10 +328,22 @@
                     <div class="relative pl-8 sm:pl-10 reveal">
                         <span class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-sage ring-4 ring-beigeAlt"></span>
                         <div class="p-6 sm:p-7 rounded-2xl bg-creamCard border border-sandBorder shadow-sm">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                                <div>
-                                    <h3 class="font-display font-bold text-lg sm:text-xl text-espresso">Brand Ambassador</h3>
-                                    <div class="text-sm font-semibold text-terracotta">Polo Ralph Lauren <span class="text-taupeMuted font-normal">• Texas, United States</span></div>
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+                                <div class="flex items-center gap-3.5">
+                                    <!-- Polo Ralph Lauren Heritage Monogram Badge -->
+                                    <div class="w-12 h-12 rounded-xl bg-white border border-sandBorder shadow-xs flex items-center justify-center shrink-0 p-1.5" title="Polo Ralph Lauren">
+                                        <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Polo Ralph Lauren Emblem">
+                                            <rect x="2" y="2" width="44" height="44" rx="9" fill="#09090B"/>
+                                            <rect x="5" y="5" width="38" height="38" rx="6.5" stroke="#93C5FD" stroke-opacity="0.45" stroke-width="1"/>
+                                            <path d="M16 33L31 15M28.5 14.5L33 18" stroke="#60A5FA" stroke-width="1.6" stroke-linecap="round"/>
+                                            <text x="24" y="27.5" text-anchor="middle" fill="#FFFFFF" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="12" letter-spacing="0.8">PRL</text>
+                                            <text x="24" y="35.5" text-anchor="middle" fill="#CBD5E1" font-family="Inter, sans-serif" font-weight="600" font-size="4.8" letter-spacing="1.2">POLO</text>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display font-bold text-lg sm:text-xl text-espresso">Brand Ambassador</h3>
+                                        <div class="text-sm font-semibold text-editorialBlue">Polo Ralph Lauren <span class="text-taupeMuted font-normal">• Texas, United States</span></div>
+                                    </div>
                                 </div>
                                 <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold bg-beigeMain text-taupeMuted border border-sandBorder w-fit">
                                     Dec 2023 – Jul 2024
@@ -316,10 +366,24 @@
                     <div class="relative pl-8 sm:pl-10 reveal">
                         <span class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-sage ring-4 ring-beigeAlt"></span>
                         <div class="p-6 sm:p-7 rounded-2xl bg-creamCard border border-sandBorder shadow-sm">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                                <div>
-                                    <h3 class="font-display font-bold text-lg sm:text-xl text-espresso">Brand Management Specialist</h3>
-                                    <div class="text-sm font-semibold text-terracotta">Bosch Group <span class="text-taupeMuted font-normal">• Vietnam</span></div>
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+                                <div class="flex items-center gap-3.5">
+                                    <!-- Bosch Group Logo Badge -->
+                                    <div class="w-12 h-12 rounded-xl bg-white border border-sandBorder shadow-xs flex items-center justify-center shrink-0 p-1.5" title="Bosch Group">
+                                        <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bosch Group Logo">
+                                            <rect x="2" y="2" width="44" height="44" rx="9" fill="#F8FAFC"/>
+                                            <!-- Bosch Iconic Circle & Armature Emblem -->
+                                            <circle cx="24" cy="18.5" r="10.5" stroke="#1E3A8A" stroke-width="2"/>
+                                            <path d="M18.5 14V23M29.5 14V23M18.5 18.5H29.5" stroke="#1D4ED8" stroke-width="2.2" stroke-linecap="round"/>
+                                            <path d="M15.8 14.5C17 16 17 21 15.8 22.5M32.2 14.5C31 16 31 21 32.2 22.5" stroke="#1E3A8A" stroke-width="1.5" stroke-linecap="round"/>
+                                            <!-- BOSCH Wordmark -->
+                                            <text x="24" y="38.5" text-anchor="middle" fill="#09090B" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="800" font-size="8.6" letter-spacing="0.9">BOSCH</text>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display font-bold text-lg sm:text-xl text-espresso">Brand Management Specialist</h3>
+                                        <div class="text-sm font-semibold text-editorialBlue">Bosch Group <span class="text-taupeMuted font-normal">• Vietnam</span></div>
+                                    </div>
                                 </div>
                                 <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold bg-beigeMain text-taupeMuted border border-sandBorder w-fit">
                                     Dec 2022 – Jul 2023
@@ -327,15 +391,15 @@
                             </div>
                             <ul class="space-y-2.5 text-sm text-taupeMuted leading-relaxed">
                                 <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 shrink-0"></span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-editorialBlue mt-2 shrink-0"></span>
                                     <span>Conducted market and customer data analysis to identify new business opportunities.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 shrink-0"></span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-editorialBlue mt-2 shrink-0"></span>
                                     <span>Coordinated with sales and marketing teams to execute nationwide promotional initiatives.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 shrink-0"></span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-editorialBlue mt-2 shrink-0"></span>
                                     <span>Developed strategic marketing plans based on data-driven insights and market trends.</span>
                                 </li>
                             </ul>
@@ -346,10 +410,24 @@
                     <div class="relative pl-8 sm:pl-10 reveal">
                         <span class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-sage ring-4 ring-beigeAlt"></span>
                         <div class="p-6 sm:p-7 rounded-2xl bg-creamCard border border-sandBorder shadow-sm">
-                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                                <div>
-                                    <h3 class="font-display font-bold text-lg sm:text-xl text-espresso">Brand Management Intern</h3>
-                                    <div class="text-sm font-semibold text-terracotta">Bosch Group <span class="text-taupeMuted font-normal">• Vietnam</span></div>
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+                                <div class="flex items-center gap-3.5">
+                                    <!-- Bosch Group Logo Badge -->
+                                    <div class="w-12 h-12 rounded-xl bg-white border border-sandBorder shadow-xs flex items-center justify-center shrink-0 p-1.5" title="Bosch Group">
+                                        <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bosch Group Logo">
+                                            <rect x="2" y="2" width="44" height="44" rx="9" fill="#F8FAFC"/>
+                                            <!-- Bosch Iconic Circle & Armature Emblem -->
+                                            <circle cx="24" cy="18.5" r="10.5" stroke="#1E3A8A" stroke-width="2"/>
+                                            <path d="M18.5 14V23M29.5 14V23M18.5 18.5H29.5" stroke="#1D4ED8" stroke-width="2.2" stroke-linecap="round"/>
+                                            <path d="M15.8 14.5C17 16 17 21 15.8 22.5M32.2 14.5C31 16 31 21 32.2 22.5" stroke="#1E3A8A" stroke-width="1.5" stroke-linecap="round"/>
+                                            <!-- BOSCH Wordmark -->
+                                            <text x="24" y="38.5" text-anchor="middle" fill="#09090B" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="800" font-size="8.6" letter-spacing="0.9">BOSCH</text>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display font-bold text-lg sm:text-xl text-espresso">Brand Management Intern</h3>
+                                        <div class="text-sm font-semibold text-editorialBlue">Bosch Group <span class="text-taupeMuted font-normal">• Vietnam</span></div>
+                                    </div>
                                 </div>
                                 <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold bg-beigeMain text-taupeMuted border border-sandBorder w-fit">
                                     Jun 2022 – Dec 2022
@@ -396,16 +474,27 @@
                 <article class="rounded-3xl bg-creamCard border border-sandBorder shadow-md overflow-hidden reveal">
                     <div class="p-7 sm:p-10 lg:p-12">
                         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-sandBorder">
-                            <div>
-                                <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-terracotta mb-2">
-                                    <i class="fas fa-bullhorn"></i>
-                                    <span>Digital Marketing Campaign</span>
+                            <div class="flex items-center gap-4">
+                                <!-- Compact Bosch Group Emblem -->
+                                <div class="w-12 h-12 rounded-xl bg-beigeAlt border border-sandBorder flex items-center justify-center shrink-0 p-1.5" title="Bosch ProMix">
+                                    <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bosch Emblem">
+                                        <circle cx="24" cy="18.5" r="10.5" stroke="#1E3A8A" stroke-width="2"/>
+                                        <path d="M18.5 14V23M29.5 14V23M18.5 18.5H29.5" stroke="#1D4ED8" stroke-width="2.2" stroke-linecap="round"/>
+                                        <path d="M15.8 14.5C17 16 17 21 15.8 22.5M32.2 14.5C31 16 31 21 32.2 22.5" stroke="#1E3A8A" stroke-width="1.5" stroke-linecap="round"/>
+                                        <text x="24" y="38.5" text-anchor="middle" fill="#09090B" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="800" font-size="8.6" letter-spacing="0.9">BOSCH</text>
+                                    </svg>
                                 </div>
-                                <h3 class="font-serif font-bold text-2xl sm:text-3xl text-espresso">
-                                    Marketing Campaign: Bosch ProMix
-                                </h3>
+                                <div>
+                                    <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-editorialBlue mb-1">
+                                        <i class="fas fa-bullhorn"></i>
+                                        <span>Digital Marketing Campaign</span>
+                                    </div>
+                                    <h3 class="font-serif font-bold text-2xl sm:text-3xl text-espresso">
+                                        Marketing Campaign: Bosch ProMix
+                                    </h3>
+                                </div>
                             </div>
-                            <span class="px-4 py-1.5 rounded-full bg-terracottaSoft text-terracotta text-xs font-bold whitespace-nowrap w-fit">
+                            <span class="px-4 py-1.5 rounded-full bg-editorialBlueSoft text-editorialBlue text-xs font-bold whitespace-nowrap w-fit">
                                 Jun 2022 – Dec 2023
                             </span>
                         </div>
@@ -414,25 +503,25 @@
                             <!-- Project Deliverables & Methodology -->
                             <div class="lg:col-span-8 space-y-4 text-sm sm:text-base text-taupeMuted leading-relaxed">
                                 <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 rounded-lg bg-terracottaSoft text-terracotta flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">01</div>
+                                    <div class="w-6 h-6 rounded-lg bg-editorialBlueSoft text-editorialBlue flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">01</div>
                                     <p>
                                         Developed and executed a comprehensive digital campaign via <strong class="text-espresso font-semibold">Bosch ProMix app and social media channels</strong>.
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 rounded-lg bg-terracottaSoft text-terracotta flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">02</div>
+                                    <div class="w-6 h-6 rounded-lg bg-editorialBlueSoft text-editorialBlue flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">02</div>
                                     <p>
                                         Enhanced app design, <strong class="text-espresso font-semibold">improving click-through rates by 22%</strong>.
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 rounded-lg bg-terracottaSoft text-terracotta flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">03</div>
+                                    <div class="w-6 h-6 rounded-lg bg-editorialBlueSoft text-editorialBlue flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">03</div>
                                     <p>
                                         Created engaging content strategy that <strong class="text-espresso font-semibold">increased user retention and platform engagement</strong>.
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 rounded-lg bg-terracottaSoft text-terracotta flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">04</div>
+                                    <div class="w-6 h-6 rounded-lg bg-editorialBlueSoft text-editorialBlue flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">04</div>
                                     <p>
                                         Analyzed campaign metrics and <strong class="text-espresso font-semibold">optimized performance based on user behavior data</strong>.
                                     </p>
@@ -440,14 +529,14 @@
                             </div>
 
                             <!-- Project Focus Pillars -->
-                            <div class="lg:col-span-4 p-5 rounded-2xl bg-beigeMain border border-sandBorder space-y-4">
+                            <div class="lg:col-span-4 p-5 rounded-2xl bg-beigeAlt border border-sandBorder space-y-4">
                                 <div class="text-xs font-bold uppercase tracking-wider text-espresso">Campaign Highlights</div>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1.5 rounded-lg bg-creamCard border border-sandBorder text-xs font-semibold text-terracotta">+22% CTR Growth</span>
-                                    <span class="px-3 py-1.5 rounded-lg bg-creamCard border border-sandBorder text-xs font-medium text-espresso">App UI/UX Enhancement</span>
-                                    <span class="px-3 py-1.5 rounded-lg bg-creamCard border border-sandBorder text-xs font-medium text-espresso">Social Media Strategy</span>
-                                    <span class="px-3 py-1.5 rounded-lg bg-creamCard border border-sandBorder text-xs font-medium text-espresso">User Retention</span>
-                                    <span class="px-3 py-1.5 rounded-lg bg-creamCard border border-sandBorder text-xs font-medium text-espresso">Behavior Data Analytics</span>
+                                    <span class="px-3 py-1.5 rounded-lg bg-white border border-blue-200 text-xs font-semibold text-editorialBlue">+22% CTR Growth</span>
+                                    <span class="px-3 py-1.5 rounded-lg bg-white border border-sandBorder text-xs font-medium text-espresso">App UI/UX Enhancement</span>
+                                    <span class="px-3 py-1.5 rounded-lg bg-white border border-sandBorder text-xs font-medium text-espresso">Social Media Strategy</span>
+                                    <span class="px-3 py-1.5 rounded-lg bg-white border border-sandBorder text-xs font-medium text-espresso">User Retention</span>
+                                    <span class="px-3 py-1.5 rounded-lg bg-white border border-sandBorder text-xs font-medium text-espresso">Behavior Data Analytics</span>
                                 </div>
                             </div>
                         </div>
@@ -462,7 +551,7 @@
         <section id="skills" class="py-20 bg-beigeAlt border-y border-sandBorder">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-2xl mb-14 reveal">
-                    <span class="text-terracotta bg-terracottaSoft px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Capabilities</span>
+                    <span class="text-editorialBlue bg-editorialBlueSoft px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Capabilities</span>
                     <h2 class="font-serif font-bold text-3xl sm:text-4xl text-espresso mt-3">
                         Skills &amp; Expertise
                     </h2>
@@ -477,7 +566,7 @@
                     <!-- Category 1: Technical Skills -->
                     <div class="p-7 rounded-2xl bg-creamCard border border-sandBorder shadow-sm reveal">
                         <div class="flex items-center gap-3.5 mb-5">
-                            <div class="w-11 h-11 rounded-xl bg-terracottaSoft text-terracotta flex items-center justify-center text-lg">
+                            <div class="w-11 h-11 rounded-xl bg-editorialBlueSoft text-editorialBlue flex items-center justify-center text-lg">
                                 <i class="fas fa-laptop-code"></i>
                             </div>
                             <h3 class="font-display font-bold text-lg text-espresso">Technical Skills</h3>
@@ -519,14 +608,14 @@
                     <div class="p-7 rounded-2xl bg-creamCard border border-sandBorder shadow-sm reveal flex flex-col justify-between">
                         <div>
                             <div class="flex items-center gap-3.5 mb-5">
-                                <div class="w-11 h-11 rounded-xl bg-terracottaSoft text-terracotta flex items-center justify-center text-lg">
+                                <div class="w-11 h-11 rounded-xl bg-editorialBlueSoft text-editorialBlue flex items-center justify-center text-lg">
                                     <i class="fas fa-language"></i>
                                 </div>
                                 <h3 class="font-display font-bold text-lg text-espresso">Languages</h3>
                             </div>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3.5 py-1.5 rounded-xl bg-sageSoft border border-sage/20 text-xs font-bold text-sage">English (Fluent)</span>
-                                <span class="px-3.5 py-1.5 rounded-xl bg-sageSoft border border-sage/20 text-xs font-bold text-sage">Vietnamese (Native)</span>
+                                <span class="px-3.5 py-1.5 rounded-xl bg-sageSoft border border-sky-200 text-xs font-bold text-sage">English (Fluent)</span>
+                                <span class="px-3.5 py-1.5 rounded-xl bg-sageSoft border border-sky-200 text-xs font-bold text-sage">Vietnamese (Native)</span>
                             </div>
                         </div>
 
@@ -567,7 +656,7 @@
                                         <p class="text-sm font-medium text-taupeMuted mt-0.5">Bachelor's Degree in Marketing</p>
                                     </div>
                                     <div class="sm:text-right">
-                                        <span class="inline-block px-3 py-1 rounded-full bg-terracottaSoft text-terracotta text-xs font-bold">
+                                        <span class="inline-block px-3 py-1 rounded-full bg-editorialBlueSoft text-editorialBlue text-xs font-bold">
                                             GPA: 3.848
                                         </span>
                                         <div class="text-xs text-taupeMuted mt-1">Expected Graduation: 2027 • Richardson, TX</div>
@@ -583,7 +672,7 @@
                                         <p class="text-sm font-medium text-taupeMuted mt-0.5">Associate of Arts in Business</p>
                                     </div>
                                     <div class="sm:text-right">
-                                        <span class="inline-block px-3 py-1 rounded-full bg-terracottaSoft text-terracotta text-xs font-bold">
+                                        <span class="inline-block px-3 py-1 rounded-full bg-editorialBlueSoft text-editorialBlue text-xs font-bold">
                                             GPA: 3.905
                                         </span>
                                         <div class="text-xs text-taupeMuted mt-1">2023 – 2025 • Fort Worth, TX</div>
@@ -599,7 +688,7 @@
                                         <p class="text-sm font-medium text-taupeMuted mt-0.5">Bachelor's Degree in E-Commerce</p>
                                     </div>
                                     <div class="sm:text-right">
-                                        <span class="inline-block px-3 py-1 rounded-full bg-terracottaSoft text-terracotta text-xs font-bold">
+                                        <span class="inline-block px-3 py-1 rounded-full bg-editorialBlueSoft text-editorialBlue text-xs font-bold">
                                             GPA: 3.5
                                         </span>
                                         <div class="text-xs text-taupeMuted mt-1">2019 – 2023 • Vietnam</div>
@@ -612,7 +701,7 @@
                     <!-- Right 5 Columns: Certifications -->
                     <div class="lg:col-span-5 space-y-6">
                         <div class="reveal">
-                            <span class="text-terracotta bg-terracottaSoft px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Credentials</span>
+                            <span class="text-editorialBlue bg-editorialBlueSoft px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Credentials</span>
                             <h2 class="font-serif font-bold text-3xl sm:text-4xl text-espresso mt-3">
                                 Certifications
                             </h2>
@@ -621,7 +710,7 @@
                         <div class="space-y-4">
                             <!-- Certification 1 -->
                             <div class="p-6 rounded-2xl bg-creamCard border border-sandBorder shadow-sm flex items-start gap-4 reveal">
-                                <div class="w-11 h-11 rounded-xl bg-terracottaSoft text-terracotta flex items-center justify-center text-lg shrink-0">
+                                <div class="w-11 h-11 rounded-xl bg-editorialBlueSoft text-editorialBlue flex items-center justify-center text-lg shrink-0">
                                     <i class="fas fa-certificate"></i>
                                 </div>
                                 <div class="space-y-2">
@@ -661,7 +750,7 @@
         </section>
 
         <!-- =====================================================================
-             6. DIRECT CONTACT SECTION (NO CHATBOX / FORM)
+             6. DIRECT CONTACT SECTION
              ===================================================================== -->
         <section id="contact" class="py-20 bg-beigeAlt border-t border-sandBorder">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -679,29 +768,29 @@
                     <!-- Direct Contact Action Cards -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                         <!-- Direct Email Card -->
-                        <div class="p-6 rounded-2xl bg-beigeMain border border-sandBorder flex flex-col justify-between gap-5">
+                        <div class="p-6 rounded-2xl bg-beigeAlt border border-sandBorder flex flex-col justify-between gap-5">
                             <div class="space-y-2">
-                                <div class="w-10 h-10 rounded-xl bg-terracottaSoft text-terracotta flex items-center justify-center text-base">
+                                <div class="w-10 h-10 rounded-xl bg-editorialBlueSoft text-editorialBlue flex items-center justify-center text-base">
                                     <i class="far fa-envelope"></i>
                                 </div>
                                 <div class="text-xs font-bold uppercase tracking-wider text-taupeMuted pt-1">Email</div>
-                                <a href="mailto:ntandy1012@gmail.com" class="block text-sm sm:text-base font-bold text-espresso hover:text-terracotta transition-colors break-all">
+                                <a href="mailto:ntandy1012@gmail.com" class="block text-sm sm:text-base font-bold text-espresso hover:text-editorialBlue transition-colors break-all">
                                     ntandy1012@gmail.com
                                 </a>
                             </div>
                             <div class="flex items-center gap-2 pt-2">
-                                <a href="mailto:ntandy1012@gmail.com" class="flex-1 py-2.5 px-3 rounded-xl bg-terracotta hover:bg-terracottaDark text-creamCard text-xs font-semibold text-center transition-colors">
+                                <a href="mailto:ntandy1012@gmail.com" class="flex-1 py-2.5 px-3 rounded-xl bg-editorialBlue hover:bg-editorialBlueDark text-white text-xs font-semibold text-center transition-colors">
                                     Send Email
                                 </a>
-                                <button type="button" data-copy="ntandy1012@gmail.com" class="copy-btn py-2.5 px-3 rounded-xl bg-creamCard hover:bg-beigeAlt text-espresso text-xs font-semibold border border-sandBorder inline-flex items-center gap-1.5 transition-colors" title="Copy email address">
-                                    <i class="far fa-copy text-terracotta"></i>
+                                <button type="button" data-copy="ntandy1012@gmail.com" class="copy-btn py-2.5 px-3 rounded-xl bg-white hover:bg-slate-100 text-espresso text-xs font-semibold border border-sandBorder inline-flex items-center gap-1.5 transition-colors" title="Copy email address">
+                                    <i class="far fa-copy text-editorialBlue"></i>
                                     <span>Copy</span>
                                 </button>
                             </div>
                         </div>
 
                         <!-- Direct Phone Card -->
-                        <div class="p-6 rounded-2xl bg-beigeMain border border-sandBorder flex flex-col justify-between gap-5">
+                        <div class="p-6 rounded-2xl bg-beigeAlt border border-sandBorder flex flex-col justify-between gap-5">
                             <div class="space-y-2">
                                 <div class="w-10 h-10 rounded-xl bg-sageSoft text-sage flex items-center justify-center text-base">
                                     <i class="fas fa-phone-alt"></i>
@@ -712,10 +801,10 @@
                                 </a>
                             </div>
                             <div class="flex items-center gap-2 pt-2">
-                                <a href="tel:6823921073" class="flex-1 py-2.5 px-3 rounded-xl bg-sage hover:opacity-90 text-creamCard text-xs font-semibold text-center transition-opacity">
+                                <a href="tel:6823921073" class="flex-1 py-2.5 px-3 rounded-xl bg-sage hover:bg-sky-800 text-white text-xs font-semibold text-center transition-colors">
                                     Call Now
                                 </a>
-                                <button type="button" data-copy="(682) 392-1073" class="copy-btn py-2.5 px-3 rounded-xl bg-creamCard hover:bg-beigeAlt text-espresso text-xs font-semibold border border-sandBorder inline-flex items-center gap-1.5 transition-colors" title="Copy phone number">
+                                <button type="button" data-copy="(682) 392-1073" class="copy-btn py-2.5 px-3 rounded-xl bg-white hover:bg-slate-100 text-espresso text-xs font-semibold border border-sandBorder inline-flex items-center gap-1.5 transition-colors" title="Copy phone number">
                                     <i class="far fa-copy text-sage"></i>
                                     <span>Copy</span>
                                 </button>
@@ -723,20 +812,20 @@
                         </div>
 
                         <!-- Direct LinkedIn Card -->
-                        <div class="p-6 rounded-2xl bg-beigeMain border border-sandBorder flex flex-col justify-between gap-5">
+                        <div class="p-6 rounded-2xl bg-beigeAlt border border-sandBorder flex flex-col justify-between gap-5">
                             <div class="space-y-2">
-                                <div class="w-10 h-10 rounded-xl bg-terracottaSoft text-terracotta flex items-center justify-center text-base">
+                                <div class="w-10 h-10 rounded-xl bg-editorialBlueSoft text-editorialBlue flex items-center justify-center text-base">
                                     <i class="fab fa-linkedin-in"></i>
                                 </div>
                                 <div class="text-xs font-bold uppercase tracking-wider text-taupeMuted pt-1">LinkedIn</div>
-                                <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" rel="noopener noreferrer" class="block text-sm sm:text-base font-bold text-espresso hover:text-terracotta transition-colors">
+                                <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" rel="noopener noreferrer" class="block text-sm sm:text-base font-bold text-espresso hover:text-editorialBlue transition-colors">
                                     linkedin.com/in/andy-n
                                 </a>
                             </div>
                             <div class="pt-2">
-                                <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-creamCard hover:bg-beigeAlt text-espresso text-xs font-semibold border border-sandBorder inline-flex items-center justify-center gap-2 transition-colors">
+                                <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-espresso hover:bg-zinc-800 text-white text-xs font-semibold inline-flex items-center justify-center gap-2 transition-colors">
                                     <span>Open LinkedIn Profile</span>
-                                    <i class="fas fa-external-link-alt text-[10px] text-taupeMuted"></i>
+                                    <i class="fas fa-external-link-alt text-[10px] text-slate-300"></i>
                                 </a>
                             </div>
                         </div>
@@ -749,7 +838,7 @@
     <!-- =====================================================================
          FOOTER
          ===================================================================== -->
-    <footer class="py-10 bg-beigeMain border-t border-sandBorder text-xs sm:text-sm text-taupeMuted">
+    <footer class="py-10 bg-white border-t border-sandBorder text-xs sm:text-sm text-taupeMuted">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
@@ -761,18 +850,18 @@
                     </div>
                 </div>
                 <div class="flex flex-wrap items-center gap-4 text-xs sm:text-sm font-medium">
-                    <a href="tel:6823921073" class="hover:text-terracotta transition-colors">(682) 392-1073</a>
+                    <a href="tel:6823921073" class="hover:text-editorialBlue transition-colors">(682) 392-1073</a>
                     <span>•</span>
-                    <a href="mailto:ntandy1012@gmail.com" class="hover:text-terracotta transition-colors">ntandy1012@gmail.com</a>
+                    <a href="mailto:ntandy1012@gmail.com" class="hover:text-editorialBlue transition-colors">ntandy1012@gmail.com</a>
                     <span>•</span>
-                    <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" rel="noopener noreferrer" class="hover:text-terracotta transition-colors">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/andy-n-37802b181/" target="_blank" rel="noopener noreferrer" class="hover:text-editorialBlue transition-colors">LinkedIn</a>
                 </div>
             </div>
             <div class="pt-4 border-t border-sandBorder flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
                 <div>
                     &copy; <span id="year">2026</span> Anh Nguyen. All rights reserved.
                 </div>
-                <a href="#" class="inline-flex items-center gap-1.5 font-semibold text-espresso hover:text-terracotta transition-colors">
+                <a href="#" class="inline-flex items-center gap-1.5 font-semibold text-espresso hover:text-editorialBlue transition-colors">
                     Back to top <i class="fas fa-arrow-up text-xs"></i>
                 </a>
             </div>
@@ -780,8 +869,8 @@
     </footer>
 
     <!-- Floating Copy Notification Toast -->
-    <div id="copy-toast" class="fixed bottom-5 right-5 z-50 px-4 py-3 rounded-xl bg-espresso text-creamCard text-xs font-semibold shadow-xl flex items-center gap-2 opacity-0 pointer-events-none translate-y-2 transition-all duration-300">
-        <i class="fas fa-check-circle text-sageSoft"></i>
+    <div id="copy-toast" class="fixed bottom-5 right-5 z-50 px-4 py-3 rounded-xl bg-espresso text-white text-xs font-semibold shadow-xl border border-zinc-800 flex items-center gap-2 opacity-0 pointer-events-none translate-y-2 transition-all duration-300">
+        <i class="fas fa-check-circle text-sky-400"></i>
         <span id="copy-toast-text">Copied to clipboard</span>
     </div>
 
@@ -826,7 +915,7 @@
                 // Temporary button feedback
                 if (btnElement && btnElement.classList.contains('copy-btn')) {
                     const originalHTML = btnElement.innerHTML;
-                    btnElement.innerHTML = '<i class="fas fa-check text-sage"></i><span>Copied</span>';
+                    btnElement.innerHTML = '<i class="fas fa-check text-editorialBlue"></i><span>Copied</span>';
                     setTimeout(() => {
                         btnElement.innerHTML = originalHTML;
                     }, 2000);
